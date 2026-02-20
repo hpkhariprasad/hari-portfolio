@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   🌙 ROOT THEME VARIABLES
+========================= */
+:root {
+
+  --background: 12 18 28;
+  --foreground: 232 235 238;
+
+  --primary: 34 211 238;          /* cyan */
+  --primary-soft: 34 211 238 / 0.2;
+
+  --muted: 148 163 184;
+  --card: 18 24 38;
+
+}
+
+/* =========================
+   🌙 GLOBAL BODY
+========================= */
+body {
+  @apply bg-[#0b0f19] text-foreground antialiased;
+  font-feature-settings: "ss01", "ss02", "cv01";
+}
+
+/* smoother scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   🌙 TERMINAL TYPOGRAPHY
+========================= */
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* =========================
+   🌙 GRID BACKGROUND UTILITY
+========================= */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgb(var(--primary)) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--primary)) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+}
+
+/* =========================
+   🌙 PREMIUM CARD SYSTEM
+========================= */
+.premium-card {
+
+  @apply rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.02),
+    0 10px 30px rgba(0,0,0,0.35);
+
+  transition: all 0.35s ease;
+}
+
+.premium-card:hover {
+
+  border-color: rgba(34,211,238,0.4);
+
+  box-shadow:
+    0 0 0 1px rgba(34,211,238,0.15),
+    0 10px 40px rgba(0,0,0,0.6),
+    0 0 25px rgba(34,211,238,0.15);
+}
+
+/* =========================
+   🌙 CYAN GLOW TEXT
+========================= */
+.text-glow {
+  text-shadow:
+    0 0 10px rgba(34,211,238,0.35),
+    0 0 20px rgba(34,211,238,0.25);
+}
+
+/* =========================
+   🌙 GRADIENT TEXT
+========================= */
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #22d3ee,
+    #67e8f9,
+    #22d3ee
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   🌙 PREMIUM BUTTONS
+========================= */
+.btn-primary {
+
+  @apply px-6 py-3 font-mono font-medium rounded-md;
+
+  background: linear-gradient(90deg, #22d3ee, #06b6d4);
+  color: #03141c;
+
+  box-shadow:
+    0 0 0 1px rgba(34,211,238,0.2),
+    0 6px 20px rgba(34,211,238,0.25);
+
+  transition: all .3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(34,211,238,0.35),
+    0 10px 30px rgba(34,211,238,0.35);
+}
+
+.btn-outline {
+
+  @apply px-6 py-3 font-mono font-medium rounded-md border;
+
+  border-color: rgba(34,211,238,0.5);
+  color: rgb(var(--primary));
+
+  transition: all .3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(34,211,238,0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(34,211,238,0.15);
+}
+
+/* =========================
+   🌙 TERMINAL PROMPT STYLE
+========================= */
+.terminal-line {
+  @apply font-mono text-sm tracking-widest uppercase text-muted-foreground;
+}
+
+.terminal-symbol {
+  color: rgb(var(--primary));
+}
+
+/* =========================
+   🌙 NAVBAR ACTIVE LINK
+========================= */
+.nav-active {
+  color: rgb(var(--primary));
+  position: relative;
+}
+
+.nav-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: rgb(var(--primary));
+  box-shadow: 0 0 12px rgba(34,211,238,0.6);
+}
+
+/* =========================
+   🌙 FADE-IN ANIMATION
+========================= */
+.fade-in {
+  animation: fadeIn .8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   🌙 SECTION SPACING
+========================= */
+.section {
+  @apply py-32 px-6 relative overflow-hidden;
+}
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
