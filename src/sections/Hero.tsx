@@ -22,7 +22,7 @@ export default function Hero() {
   }, [title])
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
 
       {/* GRID BACKGROUND */}
       <div
