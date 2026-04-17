@@ -29,23 +29,10 @@ export const portfolio = {
         "Tools & Practices": ["GitHub", "Agile", "Application Modernization"],
     },
 
-    experience: [
-        {
-        "company": "NCR Atleos",
-        "role": "Software Engineer - 3",
-        "duration": "Feb 2026 - Present",
-        "tech": ["ASP.NET Core","React", "C#.NET", ".NET 10", "AWS", "OpenAI API", "CI/CD"],
-        "location": "Hyderabad",
-        "responsibilities": [
-            "Integrated AI-driven capabilities using OpenAI APIs to enhance user workflows and operational efficiency across retail environments.",
-            "Led modernization initiatives by migrating legacy components to .NET 8, improving scalability, maintainability, and long-term system stability.",
-            "Collaborated with cross-functional teams to translate business requirements into scalable technical solutions and reliable production releases."
-        ]
-    },
-        {
+    experience: [{
         "company": "NCR Voyix",
         "role": "Software Engineer - 3",
-        "duration": "Apr 2024 - Feb 2026",
+        "duration": "Apr 2024 - Present",
         "tech": ["WPF", "C#.NET", ".NET 8", "AWS", "OpenAI API", "CI/CD"],
         "location": "Hyderabad",
         "responsibilities": [
