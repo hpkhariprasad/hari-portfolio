@@ -30,9 +30,22 @@ export const portfolio = {
     },
 
     experience: [{
+        "company": "NCR Atleos",
+        "role": "Software Engineer - 3",
+        "duration": "Feb 2026 - Present",
+        "tech": ["C#.NET", ".NET 10", "ASP.NET Core","React", "Azure", "OpenAI API", "CI/CD"],
+        "location": "Hyderabad",
+        "responsibilities": [
+            "Leading the design and development of Software Distribution for the Atleos platform, ensuring secure and efficient delivery of software updates across global environments.",
+            "Architecting and implementing AI-driven features using OpenAI APIs to enhance user interactions and operational efficiency within the Atleos ecosystem.",
+            "Driving modernization efforts by migrating legacy components to .NET 10 and React, improving performance, maintainability, and scalability.",
+            "Collaborating with cross-functional teams to translate business requirements into scalable technical solutions and reliable production releases."
+        ]
+    },
+        {
         "company": "NCR Voyix",
         "role": "Software Engineer - 3",
-        "duration": "Apr 2024 - Present",
+        "duration": "Apr 2024 - Feb 2026",
         "tech": ["WPF", "C#.NET", ".NET 8", "AWS", "OpenAI API", "CI/CD"],
         "location": "Hyderabad",
         "responsibilities": [
